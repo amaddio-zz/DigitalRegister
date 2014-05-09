@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{079FFB67-6BD4-4ED5-9EF2-38F5B3C1750D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigitalCashDesk</RootNamespace>
+    <AssemblyName>DigitalCashDesk</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>69AE04C1E6BB20B1CC693714F871C51E3A32D21E</ManifestCertificateThumbprint>
+    <ManifestKeyFile>DigitalCashDesk_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <PublishUrl>E:\esscafe\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>38</ApplicationRevision>
+    <ApplicationVersion>1.5.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CashConfigWithTabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashConfigWithTabs.Designer.cs">
+      <DependentUpon>CashConfigWithTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewProductRow.cs" />
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectTableForm.Designer.cs">
+      <DependentUpon>SelectTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Calculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Calculator.Designer.cs">
+      <DependentUpon>_Calculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculatorButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_CashConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_CashConfig.Designer.cs">
+      <DependentUpon>_CashConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashMainMdi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashMainMdi.Designer.cs">
+      <DependentUpon>CashMainMdi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashPrintDocument.cs">
+    </Compile>
+    <Compile Include="InsertDiverse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertDiverse.Designer.cs">
+      <DependentUpon>InsertDiverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiversePrintDocument.cs" />
+    <Compile Include="_ObsoleteCashWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_ObsoleteCashWork.Designer.cs">
+      <DependentUpon>_ObsoleteCashWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DigitalCashDeskDBDataSet.cs">
+      <DependentUpon>DigitalCashDeskDBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DigitalCashDeskDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DigitalCashDeskDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Form1.designer.cs">
+      <DependentUpon>_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceNumberManager.cs" />
+    <Compile Include="KitchenPrintDocument.cs" />
+    <Compile Include="BarPrintDocument.cs" />
+    <Compile Include="CustomerReceiptDocument.cs" />
+    <Compile Include="NewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewOrder.designer.cs">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_OrderedCashWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_OrderedCashWork.Designer.cs">
+      <DependentUpon>_OrderedCashWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderManager.cs" />
+    <Compile Include="_OrderViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_OrderViewer.Designer.cs">
+      <DependentUpon>_OrderViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TableOrderOverview2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableOrderOverview2.Designer.cs">
+      <DependentUpon>TableOrderOverview2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="_OrderedProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_OrderedProducts.Designer.cs">
+      <DependentUpon>_OrderedProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReceiptPreviewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptPreviewer.Designer.cs">
+      <DependentUpon>ReceiptPreviewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CashConfigWithTabs.resx">
+      <DependentUpon>CashConfigWithTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectTableForm.resx">
+      <DependentUpon>SelectTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Calculator.resx">
+      <DependentUpon>_Calculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_CashConfig.resx">
+      <DependentUpon>_CashConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashMainMdi.resx">
+      <DependentUpon>CashMainMdi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashPrintDocument.resx">
+      <DependentUpon>CashPrintDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertDiverse.resx">
+      <DependentUpon>InsertDiverse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiversePrintDocument.resx">
+      <DependentUpon>DiversePrintDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_ObsoleteCashWork.resx">
+      <DependentUpon>_ObsoleteCashWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Form1.resx">
+      <DependentUpon>_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitchenPrintDocument.resx">
+      <DependentUpon>KitchenPrintDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarPrintDocument.resx">
+      <DependentUpon>BarPrintDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReceiptDocument.resx">
+      <DependentUpon>CustomerReceiptDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrder.resx">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_OrderedCashWork.resx">
+      <DependentUpon>_OrderedCashWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_OrderViewer.resx">
+      <DependentUpon>_OrderViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableOrderOverview2.resx">
+      <DependentUpon>TableOrderOverview2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_OrderedProducts.resx">
+      <DependentUpon>_OrderedProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptPreviewer.resx">
+      <DependentUpon>ReceiptPreviewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableOrderOverview.resx">
+      <DependentUpon>TableOrderOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DigitalCashDeskDBDataSet.xsc">
+      <DependentUpon>DigitalCashDeskDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DigitalCashDeskDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DigitalCashDeskDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DigitalCashDeskDBDataSet.xss">
+      <DependentUpon>DigitalCashDeskDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TableOrderOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableOrderOverview.Designer.cs">
+      <DependentUpon>TableOrderOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DigitalCashDeskDB.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\okSmall.png" />
+    <None Include="Resources\deleteSmall.png" />
+    <None Include="Resources\ip_icon_02_Ok.png" />
+    <None Include="Resources\ip_icon_02_Cancel.png" />
+    <None Include="Resources\DeleteTableOrder.png" />
+    <None Include="Resources\symbol-error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
